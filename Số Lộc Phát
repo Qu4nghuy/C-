@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int check(int n){
+	while(n){
+		int x = n % 10;
+		if(x != 0 && x != 6 && x != 8) return false;
+		n /= 10;
+	}
+	return true;
+}
+
+int main(){
+	int t; cin >> t;
+	while(t--){
+		int n; cin >> n;
+		if(check(n)){
+			cout << "YES" << endl;
+			}
+		else
+			cout << "NO" << endl;
+	}
+	return 0;
+}
